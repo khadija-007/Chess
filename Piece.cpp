@@ -2,17 +2,17 @@
 using namespace std;
 Piece::Piece(bool st,bool alive, Position pos, Colour col)
 {
-	hasMoved = st;
-	isAlive = alive;
+	moved= st;
+	Alive = alive;
 	position = pos;
 	colour = col;
 }
 Piece:: ~Piece(){}
-bool Piece::getStatus() const
+bool Piece::isAlive() const
 {
-	return isAlive;
+	return Alive;
 }
-bool Piece::hasMov() const
+bool Piece::hasMoved() const
 {
 	return hasMoved;
 }

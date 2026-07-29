@@ -15,5 +15,5 @@ public:
 	bool hasMoved() const;
 	Position getPosition();
 	void setPosition(const Position& rhs);
-	virtual bool isLegalMove() = 0;
+	virtual bool isLegalMove(const Position& destination) = 0;
 };
