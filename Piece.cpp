@@ -14,7 +14,7 @@ bool Piece::isAlive() const
 }
 bool Piece::hasMoved() const
 {
-	return hasMoved;
+	return moved;
 }
 Position Piece:: getPosition()
 {
@@ -23,5 +23,13 @@ Position Piece:: getPosition()
 void Piece::setPosition(const Position& rhs)
 {
 	position = rhs;
+}
+Colour Piece::getColour()const
+{
+	return colour;
+}
+void Piece:: setIsAlive(bool alive)
+{
+	Alive = alive;
 }
 

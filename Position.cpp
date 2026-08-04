@@ -23,11 +23,16 @@ Position& Position:: operator=(const Position& rhs)
 	}
 	return *this;
 }
-int Position::getRow()
+int Position::getRow() const
 {
 	return row;
 }
-int Position::getCol()
+int Position::getCol() const
 {
 	return col;
+}
+void Position::setPosition(int i,int j)
+{
+	row = i;
+	col = j;
 }
