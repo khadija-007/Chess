@@ -15,6 +15,7 @@ public:
 	bool isAlive() const;
 	void setIsAlive(bool alive);
 	bool hasMoved() const;
+	void setHasMoved(bool m);
 	Position getPosition();
 	void setPosition(const Position& rhs);
 	virtual bool isLegalMove(const Position& destination,Board & board) = 0;

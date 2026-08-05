@@ -20,6 +20,10 @@ Position Piece:: getPosition()
 {
 	return position;
 }
+void Piece:: setHasMoved(bool m)
+{
+	moved = m;
+}
 void Piece::setPosition(const Position& rhs)
 {
 	position = rhs;

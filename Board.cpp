@@ -160,6 +160,7 @@ bool Board::movePiece(const Position& source, const Position& dest)
 		int oldc = source.getCol();
 		if (movingPiece->isLegalMove(dest,*this)) //have to pass board
 		{
+			movingPiece->setHasMoved(true);
 			if (destinationPiece!=nullptr)
 			{
 				destinationPiece->setIsAlive(false);

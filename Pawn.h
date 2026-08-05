@@ -1,16 +1,9 @@
 #pragma once
 #include "Piece.h"
-class Pawn : public Piece
+class Pawn : public Piece 
 {
 public:
-	Pawn(bool move,bool alive, const Position& pos, Colour col) :Piece(move,alive,pos, col) {};
-	bool isLegalMove(const Position& dest,Board& board) override 
-	{
-		return true;
-	};
-	char getSymbol()
-	{
-		return 'P';
-	};
-
+    Pawn(bool move, bool alive, const Position& pos, Colour col) : Piece(move, alive, pos, col) {};
+    bool isLegalMove(const Position& dest, Board& board) override;
+    char getSymbol() override;
 };
