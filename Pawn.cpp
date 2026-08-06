@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Pawn.h"
+#include "Board.h"
 using namespace std;
 bool Pawn:: isLegalMove(const Position& dest, Board& board) 
 {

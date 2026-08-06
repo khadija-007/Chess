@@ -1,7 +1,7 @@
 #pragma once
 #include "Position.h"
 #include "Colour.h"
-#include "Board.h"
+class Board;
 class Piece
 {
 private:

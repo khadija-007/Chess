@@ -94,10 +94,18 @@ void Board::displayBoard() const
 		{
 			if (board[i][j] == nullptr)
 			{
-				cout << "- ";
+				cout << "-- ";
 			}
 			else
 			{
+				if (board[i][j]->getColour() == Colour::White)
+				{
+					cout << "W";
+				}
+				else
+				{
+					cout << "B";
+				}
 				cout<<board[i][j]->getSymbol() << " ";
 			}
 		}
@@ -178,7 +186,41 @@ bool Board::movePiece(const Position& source, const Position& dest)
 
 int main()
 {
-	Board b;
-	b.displayBoard();
-	return 0;
+	Board board;
+
+	bool player1Turn = true;
+
+	while (true)
+	{
+		board.displayBoard();
+
+		if (player1Turn)
+			cout << "\nPlayer 1 (White)\n";
+		else
+			cout << "\nPlayer 2 (Black)\n";
+
+		int sr, sc, dr, dc;
+
+		cout << "Source Row: ";
+		cin >> sr;
+		cout << "Source Col: ";
+		cin >> sc;
+
+		cout << "Destination Row: ";
+		cin >> dr;
+		cout << "Destination Col: ";
+		cin >> dc;
+
+		if (board.movePiece(Position(sr, sc), Position(dr, dc)))
+		{
+			cout << "Move Successful!\n";
+			player1Turn = !player1Turn;
+		}
+		else
+		{
+			cout << "Illegal Move! Try Again.\n";
+		}
+
+		cout << endl;
+	}
 }
